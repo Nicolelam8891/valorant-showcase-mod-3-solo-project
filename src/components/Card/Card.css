@@ -2,6 +2,6 @@
   box-sizing: border-box;
   border: 3px solid black;
   padding: 10px;
-  background-color: rgb(204, 233, 243);
+  background-color: rgba(204, 233, 243, 0);
   border-radius: 15px;
 }
