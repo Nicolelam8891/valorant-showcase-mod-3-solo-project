@@ -1,0 +1,12 @@
+.character-full-portrait {
+  height: 70vh;
+  width: 50vw;
+}
+
+p {
+  color: white;
+}
+
+.character-details {
+  border: solid 5px white
+}
