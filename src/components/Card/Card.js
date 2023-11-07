@@ -1,11 +1,14 @@
-import './Card.css'
+import "./Card.css";
 
-const Card = () => {
+const Card = ({ icon, name, role, uuid }) => {
   return (
     <div className='card'>
-      <h3>Card goes here!</h3>
+      <img src ={icon} className="character-icon-image"/>
+      <p className="character-name">{name}</p>
+      <p className="character-role">{role}</p>
     </div>
-  )
-}
+  );
+};
+
 
 export default Card;

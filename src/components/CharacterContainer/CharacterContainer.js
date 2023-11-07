@@ -8,21 +8,24 @@ const CharacterContainer = () => {
   const [characters, setCharacters] = useState([])
   const [error, setError] = useState("")
 
-  const getAllData = async () => {
-  try {
-    const response = await fetch('https://valorant-api.com/v1/agents');
-    if (!response.ok) {
-      throw new Error(`Sorry, there is an error! status: ${response.status}. Please try again later`);
+  const getAllData = () => {
+  fetch('https://valorant-api.com/v1/agents')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Sorry, there is an error! status: ${response.status}. Please try again later`)
     }
-    const data = await response.json();
-    console.log(data);
-    setCharacters([...characters, ...data.data]);
-  } catch (event) {
-    console.error(event.message);
+    return response.json()
+    })
+      .then(data => {
+      console.log(data)
+    setCharacters([...characters, ...data.data])
+  })
+   .catch (event => {
+    console.error(event.message)
     setError(event.message)
-  }
-  };
-  
+  });
+}
+
   useEffect(() => {
     getAllData()
   }, [])
@@ -34,18 +37,19 @@ const CharacterContainer = () => {
     return (
       <Card 
         key={uuid}
+        id={uuid}
         icon={displayIcon} 
         name={displayName} 
         role={roleDisplayName} 
       />
     );
   });
+  console.log("characterCards:=====", characterCards);
 
 
   return (
    
     <main className='character-container'>
-       <h2>Characters go here!</h2>
        {characterCards}
        {error && <p className='error-message'>{error}</p>}
     </main>
