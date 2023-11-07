@@ -8,10 +8,10 @@ const App = () => {
     <Router>
       <main className='App'>
         <h1>Valorant</h1>
-        <CharacterContainer />
       </main>
 
       <Routes>
+        <Route path='/' element={<CharacterContainer />} />
         <Route
           path='/characterDetails/:id'
           element={<CharacterDetails />}
