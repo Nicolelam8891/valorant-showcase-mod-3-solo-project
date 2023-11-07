@@ -1,12 +1,15 @@
 import './App.css';
+import CharacterContainer from '../CharacterContainer/CharacterContainer';
 
 const App = () => {
 
-  
+
+
   return (
-    <div className="App">
-      
-    </div>
+    <main className="App">
+      <h1>Valorant</h1>
+      <CharacterContainer />
+    </main>
   );
 }
 
