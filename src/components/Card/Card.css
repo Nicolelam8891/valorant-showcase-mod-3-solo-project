@@ -1,15 +1,43 @@
 .card {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   box-sizing: border-box;
+  align-items: center;
   width: 387px;
   height: 180px;
   padding: 10px;
   border-radius: 15px;
-  border: 1px solid #0071a7;
+  border: 3px solid #0071a7;
   background: linear-gradient(45deg, rgba(87, 85, 85, 0.5), rgba(7, 7, 7, 0.5), rgba(87, 85, 85, 0.5));
   margin: 20px;
 }
+.no-underline {
+  text-decoration: none;
+}
 
 .character-icon-image {
-  height: 190px;
+  height: 210px;
   border-radius: 45px;
+}
+
+.character-name {
+  color: #FF4654;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.character-role {
+  color: #e9eff6;
+text-align: center;
+font-family: Black Ops One;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
