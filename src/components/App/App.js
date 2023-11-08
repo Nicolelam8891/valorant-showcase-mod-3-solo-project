@@ -2,12 +2,13 @@ import "./App.css";
 import CharacterContainer from "../CharacterContainer/CharacterContainer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CharacterDetails from "../CharacterDetails/CharacterDetails";
+import Header from "../Header/Header";
 
 const App = () => {
   return (
     <Router>
       <main className='App'>
-        <h1>Valorant</h1>
+        <Header />
       </main>
 
       <Routes>
