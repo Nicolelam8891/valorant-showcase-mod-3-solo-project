@@ -16,7 +16,7 @@ const Header = ( { showHomeButton }) => {
           </Link>
         )}
 
-       <Link to='/' className="no-underline">
+       <Link to='/team' className="no-underline">
             <button className='team-button'> TEAM </button>
           </Link>
           </div>
