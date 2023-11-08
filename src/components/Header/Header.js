@@ -9,6 +9,9 @@ const Header = () => {
       <Link to='/'>
           <img src="valorant.png" className='valorant-logo'/>
       </Link>
+      <Link to='/'>
+        <button className='home-button'> BUTTON </button>
+      </Link>
       </header>
   
     </div>
