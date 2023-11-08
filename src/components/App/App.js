@@ -13,20 +13,17 @@ const App = () => {
   const addToTeam = (characterObject) => {
     setErrorMessage(""); //this will reset the error message each time a user tries to add a character.
 
-    //conditional for team page
-    if (teamOneCharacters.length >= 5) {
-      setErrorMessage("You can only add a maximum of 5 players to a team.");
-    } else if (
-      !teamOneCharacters.some(
-        (teamOneCharacter) => teamOneCharacter.uuid === characterObject.uuid
-      )
-    ) {
-      setTeamOneCharacters((prevTeamOneCharacters) => [
-        ...teamOneCharacters,
-        characterObject,
-      ]);
-    }
-  };
+      if (teamOneCharacters.some(teamOneCharacter => teamOneCharacter.uuid === characterObject.uuid)) {
+        setErrorMessage("This character has already been added to the team. Please select another.");
+      } else if (teamOneCharacters.length >= 5) {
+        setErrorMessage("You can only add a maximum of 5 players to a team.");
+      } else {
+        // Add the character to the team if it's not full and the character isn't already added
+        setTeamOneCharacters(teamOneCharacters => [...teamOneCharacters, characterObject]);
+      }
+    };
+  
+ 
 
   return (
     <Router>
