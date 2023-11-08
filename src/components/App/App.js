@@ -8,15 +8,22 @@ const App = () => {
   return (
     <Router>
       <main className='App'>
-        <Header />
       </main>
-
       <Routes>
-        <Route path='/' element={<CharacterContainer />} />
+        <Route path='/' element={
+        <>
+        <Header showHomeButton={false} /> {/* Hide button on home page */}
+        <CharacterContainer />
+      </>
+        }/>
         <Route
           path='/characterDetails/:id'
-          element={<CharacterDetails />}
-        ></Route>
+          element={
+            <>
+            <Header showHomeButton={true} /> {/* Show button on character details page */}
+            <CharacterDetails />
+          </>
+          }/>
       </Routes>
     </Router>
   );
