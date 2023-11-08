@@ -4,9 +4,19 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CharacterDetails from "../CharacterDetails/CharacterDetails";
 import Header from "../Header/Header";
 import TeamOne from "../TeamOne/TeamOne";
+import { useState } from 'react'
 
 
 const App = () => {
+
+  const [teamOneCharacters, setTeamOneCharacters] = useState([])
+
+  const addToTeam = ( characterObject ) => {
+    if (!teamOneCharacters.some(teamOneCharacter => teamOneCharacter.uuid === characterObject.uuid)) {
+      setTeamOneCharacters([...teamOneCharacters, characterObject])
+    }
+  }
+
   return (
     <Router>
       <main className='App'></main>
@@ -25,7 +35,7 @@ const App = () => {
           element={
             <>
               <Header showHomeButton={true} showTeamButton={true} />
-              <CharacterDetails />
+              <CharacterDetails addToTeam={addToTeam} />
             </>
           } 
         />
@@ -34,7 +44,7 @@ const App = () => {
           element={
             <>
               <Header showHomeButton={true} showTeamButton={false} />
-              <TeamOne />
+              <TeamOne teamOneCharacters={teamOneCharacters}/>
             </>
           }
         />
