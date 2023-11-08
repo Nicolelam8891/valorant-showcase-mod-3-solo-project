@@ -47,6 +47,7 @@ const CharacterContainer = () => {
 
   return (
     <main className='character-container'>
+      <div className='line'></div>
       {characterCards}
       {error && <p className='error-message'>{error}</p>}
     </main>

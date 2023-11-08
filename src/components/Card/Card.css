@@ -1,7 +1,15 @@
 .card {
   box-sizing: border-box;
-  border: 3px solid black;
+  width: 387px;
+  height: 180px;
   padding: 10px;
-  background-color: rgba(204, 233, 243, 0);
   border-radius: 15px;
+  border: 1px solid #0071a7;
+  background: linear-gradient(45deg, rgba(87, 85, 85, 0.5), rgba(7, 7, 7, 0.5), rgba(87, 85, 85, 0.5));
+  margin: 20px;
+}
+
+.character-icon-image {
+  height: 190px;
+  border-radius: 45px;
 }
