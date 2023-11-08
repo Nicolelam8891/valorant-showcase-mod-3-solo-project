@@ -12,6 +12,14 @@
   padding-top: 20px;
 }
 
+.team-one-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 .display-icon-image-card {
   display: flex;
   flex-direction: row;
@@ -39,15 +47,20 @@ align-items: center;
 
 .delete-button {
   margin-right: 7px;
-  border: 1px solid #0071a7;
-  background: #000;
+  border: 3px solid #0071a7;
+  background: linear-gradient(
+    45deg,
+    rgba(77, 77, 143, 0.8),
+    rgba(7, 7, 7, 0.8),
+    rgba(77, 77, 144, 0.8)
+  );
   width: 70px;
-  height: px;
-  color: #ff4654;
+  color: #0071a7;
   font-family: Black Ops One;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  border-radius: 20px;
 }
