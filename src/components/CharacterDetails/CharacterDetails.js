@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
+  const [teamOneCharacters, setTeamOneCharacters] = ([])
   const [error, setError] = useState("");
   const { id } = useParams();
 
@@ -35,10 +36,17 @@ const CharacterDetails = () => {
     return <div>Loading...</div>;
   }
 
+  const addToTeam = ( characterObject ) => {
+    if (!teamOneCharacters.some(teamOneCharacter => teamOneCharacter.uuid === characterObject.uuid)) {
+      setTeamOneCharacters([...teamOneCharacters, characterObject])
+    }
+  }
+
   return (
     <div className='single-character-page'>
       <div className='line'></div>
       <div className='character-details'>
+      <button className="add-to-team-button" onClick={addToTeam(character)}>Add to Team</button>
         <img src={character.fullPortrait} className='character-full-portrait' />
         <p className='single-character-name'>
           <strong>Name: </strong>

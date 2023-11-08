@@ -15,7 +15,6 @@ const Header = ( { showHomeButton }) => {
             <button className='home-button'> HOME </button>
           </Link>
         )}
-
        <Link to='/team' className="no-underline">
             <button className='team-button'> TEAM </button>
           </Link>

@@ -17,3 +17,24 @@ p {
   background-color: #FF4654;;
   margin: 0 20px;
 }
+
+.add-to-team-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-right: 7px;
+  border: 1px solid #0071a7;
+  background: #000;
+  width: 174px;
+  height: 50px;
+  width: 177px;
+  height: 38px;
+  color: #ff4654;
+  font-family: Black Ops One;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
