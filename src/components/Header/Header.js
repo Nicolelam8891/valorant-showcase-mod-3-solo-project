@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <div>
       <header> 
-      <header>VALORANT</header>
       <Link to='/'>
           <img src="valorant.png" className='valorant-logo'/>
       </Link>
       </header>
+  
     </div>
     )
 }
