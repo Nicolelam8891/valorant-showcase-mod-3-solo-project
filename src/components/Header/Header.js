@@ -9,12 +9,17 @@ const Header = ( { showHomeButton }) => {
         <Link to='/'>
           <img src='valorant.png' className='valorant-logo' />
         </Link>
+      <div className="button-container">
         {showHomeButton && (
           <Link to='/' className="no-underline">
             <button className='home-button'> HOME </button>
           </Link>
         )}
-       
+
+       <Link to='/' className="no-underline">
+            <button className='team-button'> TEAM </button>
+          </Link>
+          </div>
       </header>
     </div>
   );
