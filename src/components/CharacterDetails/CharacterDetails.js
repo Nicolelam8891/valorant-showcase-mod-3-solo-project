@@ -37,6 +37,7 @@ const CharacterDetails = () => {
 
   return (
     <div className='single-character-page'>
+      <div className='line'></div>
       <div className='character-details'>
         <img src={character.fullPortrait} className='character-full-portrait' />
         <p className='single-character-name'>

@@ -3,6 +3,8 @@ import CharacterContainer from "../CharacterContainer/CharacterContainer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CharacterDetails from "../CharacterDetails/CharacterDetails";
 import Header from "../Header/Header";
+import TeamOne from "../TeamOne/TeamOne";
+
 
 const App = () => {
   return (
@@ -25,14 +27,14 @@ const App = () => {
               <Header showHomeButton={true} showTeamButton={true} />
               <CharacterDetails />
             </>
-          }
+          } 
         />
         <Route
           path='/team'
           element={
             <>
               <Header showHomeButton={true} showTeamButton={false} />
-              {/* <CharacterDetails /> */}
+              <TeamOne />
             </>
           }
         />
