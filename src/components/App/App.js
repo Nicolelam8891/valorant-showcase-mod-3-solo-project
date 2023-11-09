@@ -8,11 +8,12 @@ import { useState } from "react";
 
 const App = () => {
   const [teamOneCharacters, setTeamOneCharacters] = useState([]);
+  const [confirmationMessage, setConfirmationMessage] = useState('')
   const [errorMessage, setErrorMessage] = useState("");
 
   const addToTeam = (characterObject) => {
     setErrorMessage(""); //this will reset the error message each time a user tries to add a character.
-
+      setConfirmationMessage("Character added successfully!")
       if (teamOneCharacters.some(teamOneCharacter => teamOneCharacter.uuid === characterObject.uuid)) {
         setErrorMessage("This character has already been added to the team. Please select another.");
       } else if (teamOneCharacters.length >= 5) {
@@ -29,11 +30,9 @@ const App = () => {
           setTeamOneCharacters(filteredCharacters)
         };
       
-  
   return (
     <Router>
       <main className='App'></main>
-      {errorMessage && <div className='team-error-message'>{errorMessage}</div>}
       <Routes>
         <Route
           path='/'
@@ -49,7 +48,7 @@ const App = () => {
           element={
             <>
               <Header showHomeButton={true} showTeamButton={true} />
-              <CharacterDetails addToTeam={addToTeam} />
+              <CharacterDetails addToTeam={addToTeam} errorMessage={errorMessage} confirmationMessage={confirmationMessage}/>
             </>
           }
         />

@@ -36,3 +36,7 @@ p {
   line-height: normal;
   text-decoration: none;
 }
+
+.team-error-message, .team-confirmation-message {
+  color: white;
+}
