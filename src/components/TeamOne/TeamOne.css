@@ -38,6 +38,11 @@
   height: 400px;
 }
 
+.display-icon-image {
+    border: 3px solid #7e5757;
+    border-radius: 20px;
+
+}
 .team-icon-info {
 display: flex;
 justify-content: center;
