@@ -38,10 +38,15 @@ const CharacterDetails = ( { addToTeam, errorMessage, confirmationMessage}) => {
   return (
     <div className='single-character-page'>
       <div className='character-details'>
-      <button className="add-to-team-button" onClick={() => addToTeam(character)}>Add to Team</button>
       {errorMessage && <div className='team-error-message'>{errorMessage}</div>}
       {confirmationMessage && <div className='team-confirmation-message'>{confirmationMessage}</div>}
+
+      <div className="character-full-portrait-container">
+      <button className="add-to-team-button" onClick={() => addToTeam(character)}>Add to Team</button>
         <img src={character.fullPortrait} className='character-full-portrait' />
+      </div>
+
+      <div className="character-info-container">
         <p className='single-character-name'>
           <strong>Name: </strong>
           {character.displayName}
@@ -57,9 +62,10 @@ const CharacterDetails = ( { addToTeam, errorMessage, confirmationMessage}) => {
         <p className='single-character-role-description'>
           <strong>Role description: </strong> {character.role.description}
         </p>
-        <h3>
+        <h3 className="abilities-name">
           <strong>Abilities: </strong>
         </h3>
+      
         <div className='ability-section'>
           <ul className='ability-details'>
             {character.abilities.map((ability) => (
@@ -74,6 +80,7 @@ const CharacterDetails = ( { addToTeam, errorMessage, confirmationMessage}) => {
               </div>
             ))}
           </ul>
+        </div>
         </div>
       </div>
       {/* {error && <p className='error-message'>{error}</p>} */}
