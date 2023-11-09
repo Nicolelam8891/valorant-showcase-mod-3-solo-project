@@ -7,7 +7,7 @@ const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
     <div className="team-one-page">
     
       <div className='line'></div>
-      {!teamOneCharacters.length && <h2 className="empty-team-message">There are no characters built out for the team yet, add some!</h2>}
+      {!teamOneCharacters.length && <h2 className="empty-team-message">There are no saved characters yet, you can add up to 5 characters on a team!</h2>}
       <div className='team-one-container'>
           {teamOneCharacters.map((teamOneCharacter) => (
         <div className='display-icon-image-card'>
