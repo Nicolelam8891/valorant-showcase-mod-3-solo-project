@@ -1,6 +1,6 @@
 import "./TeamOne.css";
 
-const TeamOne = ({ teamOneCharacters }) => {
+const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
   console.log("teamOneCharacters:=====", teamOneCharacters);
 
   return (
@@ -16,7 +16,7 @@ const TeamOne = ({ teamOneCharacters }) => {
                 alt={teamOneCharacter.displayName}
               />
               <p className='character-name'>{teamOneCharacter.displayName}</p>
-              <button className="delete-button">❌</button> 
+              <button className="delete-button" onClick={() => deleteCharacter(teamOneCharacter)}>❌</button> 
             </div>
         </div>
           ))}

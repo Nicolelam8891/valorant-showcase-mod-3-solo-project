@@ -23,8 +23,13 @@ const App = () => {
       }
     };
   
- 
-
+    const deleteCharacter = (characterObject) => {
+      const filteredCharacters = teamOneCharacters.filter(
+        (teamOneCharacter) => teamOneCharacter.uuid !== characterObject.uuid);
+          setTeamOneCharacters(filteredCharacters)
+        };
+      
+  
   return (
     <Router>
       <main className='App'></main>
@@ -53,7 +58,7 @@ const App = () => {
           element={
             <>
               <Header showHomeButton={true} showTeamButton={false} />
-              <TeamOne teamOneCharacters={teamOneCharacters} />
+              <TeamOne teamOneCharacters={teamOneCharacters} showTeamButton={false} deleteCharacter={deleteCharacter}/>
             </>
           }
         />
