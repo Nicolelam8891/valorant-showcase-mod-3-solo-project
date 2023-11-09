@@ -37,7 +37,6 @@ const CharacterDetails = ( { addToTeam, errorMessage, confirmationMessage}) => {
 
   return (
     <div className='single-character-page'>
-      <div className='line'></div>
       <div className='character-details'>
       <button className="add-to-team-button" onClick={() => addToTeam(character)}>Add to Team</button>
       {errorMessage && <div className='team-error-message'>{errorMessage}</div>}

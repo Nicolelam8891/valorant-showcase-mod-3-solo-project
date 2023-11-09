@@ -21,6 +21,7 @@ const Header = ({ showHomeButton, showTeamButton }) => {
           )}
         </div>
       </header>
+      <div className='line'></div>
     </div>
   );
 };
