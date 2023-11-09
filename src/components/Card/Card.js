@@ -8,7 +8,7 @@ const Card = ({ icon, name, role, id }) => {
         <img src={icon} className='character-icon-image' />
         <div className='role-name-container'>
           <p className='character-name'>{name}</p>
-          <p className='character-role'>{role}</p>
+          <p className='character-role'>Role: {role}</p>
         </div>
       </div>
     </Link>

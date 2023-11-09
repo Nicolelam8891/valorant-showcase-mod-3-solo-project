@@ -16,6 +16,7 @@ const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
                 alt={teamOneCharacter.displayName}
               />
               <p className='character-name'>{teamOneCharacter.displayName}</p>
+              <p className='character-role'>Role: {teamOneCharacter.role.displayName}</p>
               <button className="delete-button" onClick={() => deleteCharacter(teamOneCharacter)}>❌</button> 
             </div>
         </div>
