@@ -9,7 +9,7 @@ const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
       <div className='team-one-container'>
           {teamOneCharacters.map((teamOneCharacter) => (
         <div className='display-icon-image-card'>
-            <div className='team-icon-info' key={teamOneCharacter.uuid}>
+            <div className='team-icon-info'>
               <img
                 className='display-icon-image'
                 src={teamOneCharacter.displayIconSmall}

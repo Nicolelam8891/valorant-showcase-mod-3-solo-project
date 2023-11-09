@@ -3,10 +3,7 @@ import Card from "../Card/Card";
 import { useState, useEffect } from "react";
 
 const CharacterContainer = ( { getAllData, characters, error } ) => {
- 
-  useEffect(() => {
-    getAllData();
-  }, []);
+
 
   const characterCards = characters.map((character) => {
     const { displayIcon, displayName, role, uuid } = character;

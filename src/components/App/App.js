@@ -9,11 +9,12 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [allCharacters, setAllCharacters] = useState([]);
   const [teamOneCharacters, setTeamOneCharacters] = useState([]);
   const [confirmationMessage, setConfirmationMessage] = useState("");
   const [error, setError] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-
+  
   const getAllData = () => {
     fetch("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
       .then((response) => {
@@ -26,7 +27,8 @@ const App = () => {
       })
       .then((data) => {
         console.log(data);
-        setCharacters([...characters, ...data.data]);
+        setCharacters(data.data);
+        setAllCharacters(data.data);
       })
       .catch((event) => {
         console.error(event.message);
@@ -34,7 +36,18 @@ const App = () => {
       });
   };
 
-  
+  useEffect(() => {
+    getAllData();
+  }, []);
+
+  const filterCharactersByRole = (role) => {
+    if (role === '') {
+      setCharacters(allCharacters);
+    } else {
+      const filteredCharacters = allCharacters.filter((character) => character.role.displayName === role);
+      setCharacters(filteredCharacters)
+    }
+  };
 
 
   const addToTeam = (characterObject) => {
@@ -75,7 +88,7 @@ const App = () => {
           element={
             <>
               <Header showHomeButton={false} showTeamButton={true} />
-              <Form characters={characters}/>
+              <Form filterRole={filterCharactersByRole} />
               <CharacterContainer characters={characters} getAllData={getAllData} error={error} setError={setError}/>
             </>
           }

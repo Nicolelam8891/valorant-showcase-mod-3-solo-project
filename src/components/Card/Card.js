@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ icon, name, role, id }) => {
   return (
-    <Link to={`/characterDetails/${id}`} key={id} className="no-underline">
+    <Link to={`/characterDetails/${id}`} className="no-underline">
       <div className='card'>
         <img src={icon} className='character-icon-image' />
         <div className='role-name-container'>

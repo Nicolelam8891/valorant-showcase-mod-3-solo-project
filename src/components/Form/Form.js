@@ -1,27 +1,32 @@
-import './Form.css'
+import "./Form.css";
+import { useState, useEffect } from 'react'
 
-const Form = ( { character } ) => {
+const Form = ( { filterRole} ) => {
+  const [selectedRole, setSelectedRole] = useState("");
 
-  const filterCharacter = (role) => {
-    if (role === "") {
+  const handleRoleChange = (event) => {
+    setSelectedRole(event.target.value);
+  };
 
-    }
-  }
+  const handleFilterButton = (event) => {
+    event.preventDefault();
+    filterRole(selectedRole);
+  };
 
   return (
     <div className='form-container'>
       <form>
-        <select className='drop-down-menu'>
+        <select className='drop-down-menu' value={selectedRole} onChange={handleRoleChange}>
           <option value=''>All Roles</option>
           <option value='Controller'>Controller</option>
-          <option value='Dualist'>Dualist</option>
+          <option value='Duelist'>Duelist</option>
           <option value='Initiator'>Initiator</option>
           <option value='Sentinel'>Sentinel</option>
         </select>
-        <button className='filter-button'>Filter</button>
+        <button className='filter-button' onClick={handleFilterButton}>Filter</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Form;
