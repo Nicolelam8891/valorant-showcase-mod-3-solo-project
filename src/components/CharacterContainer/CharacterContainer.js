@@ -7,7 +7,7 @@ const CharacterContainer = () => {
   const [error, setError] = useState("");
 
   const getAllData = () => {
-    fetch("https://valorant-api.com/v1/agents")
+    fetch("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
       .then((response) => {
         if (!response.ok) {
           throw new Error(
