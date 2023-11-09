@@ -1,14 +1,104 @@
+.character-details {
+  display: flex;
+  flex-direction: row;
+  border-radius: 35px;
+  border: solid 3px #0071a7;
+  margin: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(77, 77, 143, 0.8),
+    rgba(7, 7, 7, 0.8),
+    rgba(87, 85, 85, 0.8)
+  );
+}
+
 .character-full-portrait {
-  height: 70vh;
-  width: 50vw;
+  height: 600px;
+  width: 550px;
+  animation: slideDown 1s ease-out forwards;
 }
 
 p {
   color: white;
 }
 
-.character-details {
-  border: solid 5px white
+.team-error-message,
+.team-confirmation-message {
+  display: flex;
+  text-align: center;
+  color: #ff4654;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: Black Ops One;
+}
+
+.single-character-role-description,
+.single-character-description {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.ability-name{
+  font: Helvetica, sans-serif;
+  color: #099add;
+  font-size: 20px;
+} 
+
+.single-character-name,
+.single-character-role,
+.abilities-name {
+  color: #ff4654;
+  font-family: Black Ops One;
+  text-shadow: #0071a7;
+  font-size: 25px;
+}
+.character-full-portrait-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.ability-details {
+  display: flex;
+  margin-right: 20px;
+}
+
+.ability-description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ability-icon {
+  width: 80px;
+  height: 80px;
+  border: solid 3px #0071a7;
+  border-radius: 45px;
+}
+
+.ability-icon:hover {
+  animation: spin 2s linear infinite;
+}
+
+.ability-slots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .add-to-team-button {
@@ -17,19 +107,38 @@ p {
   align-items: center;
   align-content: center;
   margin-right: 7px;
-  border: 1px solid #0071a7;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 3px solid #0071a7;
+  border-radius: 35px;
   background: #000;
   height: 50px;
   width: 177px;
   color: #ff4654;
   font-family: Black Ops One;
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
 }
 
-.team-error-message, .team-confirmation-message {
-  color: white;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Start from above the screen */
+    opacity: 0; /* Start with the character invisible */
+  }
+  to {
+    transform: translateY(0); /* End at the current position */
+    opacity: 1; /* End with the character fully visible */
+  }
 }
