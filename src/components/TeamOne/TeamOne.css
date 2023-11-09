@@ -5,6 +5,13 @@
   margin: 0 20px;
 }
 
+.empty-team-message {
+color: #ff4654;
+font-family: Black Ops One;
+font-size: 50px;
+
+}
+
 .team-one-page {
   display: flex;
   justify-content: center;
