@@ -48,6 +48,9 @@ describe("Homepage user flow", () => {
         .get(".role-name-container")
         .get(".character-name")
         .contains("p", "Jett")
+        .get(
+          '[href="/characterDetails/add6443a-41bd-e414-f6ad-e58d267f4e95"] > .card'
+        )
         .get(".character-role")
         .contains("p", "Role: Duelist");
       cy.get(
@@ -73,16 +76,61 @@ describe("Homepage user flow", () => {
         .select("Sentinel")
         .should("have.value", "Sentinel")
         .get(".filter-button")
-        .contains("Filter");
+        .contains("Filter")
+        .click()
+        .get(".character-container")
+        .get(".card")
+        .should("have.length", 5)
+        .get(
+          '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card > .character-icon-image'
+        )
+        .first()
+        .get(".role-name-container")
+        .get(".character-name")
+        .contains("p", "Deadlock")
+        .get(".character-role")
+        .contains("p", "Role: Sentinel")
+        .get(
+          '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card'
+        )
+        .first()
+        .find("img")
+        .should(
+          "have.attr",
+          "src",
+          "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png"
+        )
+        .get(
+          '[href="/characterDetails/569fdd95-4d10-43ab-ca70-79becc718b46"] > .card'
+        )
+        .last()
+        .get(".role-name-container")
+        .get(".character-name")
+        .contains("p", "Sage")
+        .get(".character-role")
+        .contains("p", "Role: Sentinel")
+        .get(
+          '[href="/characterDetails/569fdd95-4d10-43ab-ca70-79becc718b46"] > .card'
+        )
+        .last()
+        .find("img")
+        .should(
+          "have.attr",
+          "src",
+          "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png"
+        )
+        
 
-      // .click().get(".character-container")
-      // .get(".card")
-      // .should("have.length", 5)
-      // .get(".team-button")
-      // .contains("TEAM")
-      // .click()
-      // .url()
-      // .should("eq", "http://localhost:3000/team");
+
+        .get(".team-button")
+        .contains("TEAM")
+        .click()
+        .url().should('eq', 'http://localhost:3000/team')
+        .get(".home-button")
+        .contains("HOME")
+        .click()
+        .url()
+        .should("eq", "http://localhost:3000/");
     });
   });
 });

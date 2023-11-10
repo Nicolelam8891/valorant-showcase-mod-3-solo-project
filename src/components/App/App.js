@@ -14,7 +14,7 @@ const App = () => {
   const [confirmationMessage, setConfirmationMessage] = useState("");
   const [error, setError] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  
+
   const getAllData = () => {
     fetch("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
       .then((response) => {
@@ -41,14 +41,15 @@ const App = () => {
   }, []);
 
   const filterCharactersByRole = (role) => {
-    if (role === '') {
+    if (role === "") {
       setCharacters(allCharacters);
     } else {
-      const filteredCharacters = allCharacters.filter((character) => character.role.displayName === role);
-      setCharacters(filteredCharacters)
+      const filteredCharacters = allCharacters.filter(
+        (character) => character.role?.displayName === role
+      );
+      setCharacters(filteredCharacters);
     }
   };
-
 
   const addToTeam = (characterObject) => {
     setErrorMessage(""); //this will reset the error message each time a user tries to add a character.
@@ -89,7 +90,12 @@ const App = () => {
             <>
               <Header showHomeButton={false} showTeamButton={true} />
               <Form filterRole={filterCharactersByRole} />
-              <CharacterContainer characters={characters} getAllData={getAllData} error={error} setError={setError}/>
+              <CharacterContainer
+                characters={characters}
+                getAllData={getAllData}
+                error={error}
+                setError={setError}
+              />
             </>
           }
         />
