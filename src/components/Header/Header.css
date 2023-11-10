@@ -77,3 +77,10 @@ header {
     margin-right: 0px;
   }
 }
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    margin-bottom: 25px
+  }
+}
