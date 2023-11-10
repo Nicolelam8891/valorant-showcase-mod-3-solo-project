@@ -100,20 +100,47 @@ describe("Show selected character user flow", () => {
       cy.get(":nth-child(4) > .ability-description").contains(
         "p",
         "EQUIP Thrash. FIRE to link with Thrash’s mind and steer her through enemy territory. ACTIVATE to lunge forward and explode, Detaining any players in a small radius. When Thrash expires she reverts into a dormant globule. INTERACT to reclaim the globule and gain another Thrash charge after a short cooldown. Thrash can be reclaimed once."
-      )
-      cy.get('.character-full-portrait-container')
-      cy.get('.character-full-portrait')
-      .should("have.attr", "src")
-      .should(
-        "eq",
-        "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+      );
+      cy.get(".character-full-portrait-container");
+      cy.get(".character-full-portrait")
+        .should("have.attr", "src")
+        .should(
+          "eq",
+          "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
         );
-        cy.get('.character-full-portrait-container')
-        cy.get('.add-to-team-button').contains('Add to Team').click()
-        cy.get('.team-confirmation-message')
-        .contains('Character added successfully!')
-        cy.get('.add-to-team-button').contains('Add to Team').click()
-        cy.get('.team-error-message').contains('').This character has already been added to the team. Please select another.
+      cy.get(".character-full-portrait-container");
+      cy.get(".add-to-team-button").contains("Add to Team").click();
+      cy.get(".team-confirmation-message").contains(
+        "Character added successfully!"
+      );
+      cy.get(".add-to-team-button").contains("Add to Team").click();
+      cy.get(".team-error-message").contains(
+        "This character has already been added to the team. Please select another."
+      );
+      cy.get("header");
+      cy.get('[href="/team"]')
+        .get(".team-button")
+        .contains("TEAM")
+        .click()
+        .url()
+        .should("eq", "http://localhost:3000/team");
+      cy.get("header")
+        .get(".valorant-logo")
+        .get(".line")
+        .get(".home-button")
+        .contains("HOME");
+      cy.get(".team-one-container");
+      cy.get(".display-icon-image-card");
+      cy.get(".display-icon-image")
+        .should("have.attr", "src")
+        .should(
+          "eq",
+          "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayiconsmall.png"
+        );
+      cy.get(".team-icon-info");
+      cy.get(".character-name").contains("p", "Gekko");
+      cy.get(".character-role").contains("p", "Role: Initiator");
+      cy.get(".delete-button").contains("❌");
     });
   });
 });

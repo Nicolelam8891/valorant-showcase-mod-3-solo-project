@@ -108,6 +108,8 @@ const App = () => {
                 addToTeam={addToTeam}
                 errorMessage={errorMessage}
                 confirmationMessage={confirmationMessage}
+                setConfirmationMessage={setConfirmationMessage}
+                setErrorMessage={setErrorMessage}
               />
             </>
           }

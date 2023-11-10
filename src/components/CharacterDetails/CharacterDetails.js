@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./CharacterDetails.css";
 import { useParams } from "react-router-dom";
 
-const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage }) => {
+const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setConfirmationMessage, setErrorMessage }) => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState("");
   const { id } = useParams();
@@ -26,6 +26,8 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage }) => {
 
   useEffect(() => {
     getCharacterDetail();
+    setErrorMessage('');
+    setConfirmationMessage('');
   }, [id]);
 
   if (error) {
@@ -82,7 +84,7 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage }) => {
               {character.abilities.map((ability) => (
                 <div className='ability-slots'>
                   <img
-                    class='ability-icon'
+                    className='ability-icon'
                     src={ability.displayIcon}
                     alt={ability.displayName}
                   />
