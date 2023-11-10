@@ -73,11 +73,11 @@ describe("Homepage user flow", () => {
         .select("Sentinel")
         .should("have.value", "Sentinel")
         .get(".filter-button")
-        .contains("Filter");
-
-      // .click().get(".character-container")
-      // .get(".card")
-      // .should("have.length", 5)
+        .contains("Filter")
+        .click()
+        .get(".character-container")
+        .get(".card")
+        .should("have.length", 5);
       // .get(".team-button")
       // .contains("TEAM")
       // .click()
