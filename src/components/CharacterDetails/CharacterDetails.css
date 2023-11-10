@@ -17,16 +17,23 @@
   width: 550px;
   animation: slideDown 1s ease-out forwards;
 }
-
 p {
   color: white;
 }
 
-.team-error-message,
 .team-confirmation-message {
   display: flex;
   text-align: center;
-  color: #ff4654;
+  color: #9acfe8;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: Black Ops One;
+}
+
+.team-error-message {
+  display: flex;
+  text-align: center;
+  color: #eca6ac;
   margin-bottom: 30px;
   font-size: 20px;
   font-family: Black Ops One;
@@ -40,11 +47,11 @@ p {
   margin-right: 20px;
 }
 
-.ability-name{
+.ability-name {
   font: Helvetica, sans-serif;
   color: #099add;
   font-size: 20px;
-} 
+}
 
 .single-character-name,
 .single-character-role,
@@ -132,6 +139,18 @@ p {
   }
 }
 
+@keyframes smokeEffect {
+  0%,
+  100% {
+    filter: blur(0px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(4px);
+    opacity: 1;
+  }
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%); /* Start from above the screen */
@@ -142,3 +161,73 @@ p {
     opacity: 1; /* End with the character fully visible */
   }
 }
+
+@media (min-width: 375px) {
+  .character-details {
+    flex-direction: column;
+    background: linear-gradient(
+      45deg,
+      rgba(77, 77, 143, 0.8),
+      rgba(7, 7, 7, 0.8),
+      rgba(124, 68, 68, 0.8)
+    );
+  }
+
+  .character-full-portrait {
+    height: 350px;
+    width: 325px;
+    animation: slideDown 1s ease-out forwards;
+  }
+
+  .character-full-portrait-container {
+    margin-top: 15px;
+  }
+
+  .single-character-description,
+  .single-character-role-description {
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .ability-details {
+    display: grid;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ability-details {
+    display: flex;
+  }
+}
+
+@media (min-width: 2560px) {
+  .character-details {
+    flex-direction: row;
+  }
+
+  .character-full-portrait {
+    height: 1100px;
+    width: 1000px;
+    animation: slideDown 1s ease-out forwards;
+  }
+
+  .character-info-container {
+    justify-content: center;
+  }
+
+  .single-character-role-description,
+.single-character-description, .single-character-name,
+.single-character-role,
+.abilities-name, .ability-name, .ability-description {
+  font-size: 30px;
+}
+
+.ability-icon {
+  width: 200px;
+  height: 200px;
+  border: solid 5px #0071a7;
+  border-radius: 100px;
+}
+}
+ 

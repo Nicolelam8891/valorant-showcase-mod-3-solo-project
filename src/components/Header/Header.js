@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Header = ({ showHomeButton, showTeamButton }) => {
   return (
-    <div>
-      <header>
+    
+      <header className="header">
         <Link to='/'>
           <img src='valorant.png' className='valorant-logo' />
         </Link>
@@ -20,9 +20,9 @@ const Header = ({ showHomeButton, showTeamButton }) => {
           </Link>
           )}
         </div>
-      </header>
       <div className='line'></div>
-    </div>
+      </header>
+    
   );
 };
 

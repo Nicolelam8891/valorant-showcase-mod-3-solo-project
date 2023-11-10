@@ -11,3 +11,7 @@
   background-color: #ff4654; 
   margin: 0 20px;
 }
+
+@media (min-width: 375px) {
+  
+}
