@@ -47,11 +47,11 @@ p {
   margin-right: 20px;
 }
 
-.ability-name{
+.ability-name {
   font: Helvetica, sans-serif;
   color: #099add;
   font-size: 20px;
-} 
+}
 
 .single-character-name,
 .single-character-role,
@@ -66,7 +66,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .character-info-container {
@@ -141,7 +140,8 @@ p {
 }
 
 @keyframes smokeEffect {
-  0%, 100% {
+  0%,
+  100% {
     filter: blur(0px);
     opacity: 0;
   }
@@ -171,7 +171,6 @@ p {
       rgba(7, 7, 7, 0.8),
       rgba(124, 68, 68, 0.8)
     );
-   
   }
 
   .character-full-portrait {
@@ -181,10 +180,11 @@ p {
   }
 
   .character-full-portrait-container {
-  margin-top: 15px;
+    margin-top: 15px;
   }
 
-  .single-character-description, .single-character-role-description {
+  .single-character-description,
+  .single-character-role-description {
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
@@ -193,11 +193,41 @@ p {
   .ability-details {
     display: grid;
   }
-
 }
 
 @media (min-width: 1440px) {
-.ability-details {
-  display: flex;
+  .ability-details {
+    display: flex;
+  }
+}
+
+@media (min-width: 2560px) {
+  .character-details {
+    flex-direction: row;
+  }
+
+  .character-full-portrait {
+    height: 1100px;
+    width: 1000px;
+    animation: slideDown 1s ease-out forwards;
+  }
+
+  .character-info-container {
+    justify-content: center;
+  }
+
+  .single-character-role-description,
+.single-character-description, .single-character-name,
+.single-character-role,
+.abilities-name, .ability-name, .ability-description {
+  font-size: 30px;
+}
+
+.ability-icon {
+  width: 200px;
+  height: 200px;
+  border: solid 5px #0071a7;
+  border-radius: 100px;
 }
 }
+ 
