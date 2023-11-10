@@ -1,5 +1,5 @@
 .empty-team-message {
-color: white;
+color: rgb(200, 203, 243);
 background: linear-gradient(
     45deg,
     rgba(3, 3, 123, 0.8),
@@ -73,4 +73,11 @@ align-items: center;
   line-height: normal;
   text-decoration: none;
   border-radius: 20px;
+}
+
+@media (min-width: 375px) {
+  .empty-team-message {
+  text-align: center;
+    }
+  
 }

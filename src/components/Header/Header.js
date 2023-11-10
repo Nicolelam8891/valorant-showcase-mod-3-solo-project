@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = ({ showHomeButton, showTeamButton }) => {
   return (
     
-      <header>
+      <header className="header">
         <Link to='/'>
           <img src='valorant.png' className='valorant-logo' />
         </Link>

@@ -22,11 +22,19 @@ p {
   color: white;
 }
 
-.team-error-message,
 .team-confirmation-message {
   display: flex;
   text-align: center;
-  color: #ff4654;
+  color: #9acfe8;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: Black Ops One;
+}
+
+.team-error-message {
+  display: flex;
+  text-align: center;
+  color: #eca6ac;
   margin-bottom: 30px;
   font-size: 20px;
   font-family: Black Ops One;
@@ -141,4 +149,38 @@ p {
     transform: translateY(0); /* End at the current position */
     opacity: 1; /* End with the character fully visible */
   }
+}
+
+@media (min-width: 375px) {
+  .character-details {
+    flex-direction: column;
+    background: linear-gradient(
+      45deg,
+      rgba(77, 77, 143, 0.8),
+      rgba(7, 7, 7, 0.8),
+      rgba(124, 68, 68, 0.8)
+    );
+   
+  }
+
+  .character-full-portrait {
+    height: 350px;
+    width: 300px;
+    animation: slideDown 1s ease-out forwards;
+  }
+
+  .character-full-portrait-container {
+  margin-top: 15px;
+  }
+
+  .single-character-description, .single-character-role-description {
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .ability-details {
+    display: grid;
+  }
+
 }
