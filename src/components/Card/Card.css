@@ -47,3 +47,18 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
+@media (min-width: 375px) {
+  .card{
+  
+  width: 400px;
+  height: 180px;
+  padding: 10px;
+
+  
+  margin: 25px;
+
+  text-decoration: none;
+  }
+}
