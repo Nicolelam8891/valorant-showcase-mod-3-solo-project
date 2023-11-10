@@ -16,7 +16,7 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage }) => {
         );
       }
       const data = await response.json();
-      console.log(data);
+      console.log("individualCharacter", data);
       setCharacter(data.data);
     } catch (event) {
       console.error(event.message);

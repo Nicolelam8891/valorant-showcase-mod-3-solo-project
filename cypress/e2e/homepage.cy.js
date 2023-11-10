@@ -119,13 +119,11 @@ describe("Homepage user flow", () => {
           "src",
           "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png"
         )
-        
-
-
         .get(".team-button")
         .contains("TEAM")
         .click()
         .url().should('eq', 'http://localhost:3000/team')
+        .get('.empty-team-message').contains('h2', "There are no saved characters yet, you can add up to 5 characters on a team!")
         .get(".home-button")
         .contains("HOME")
         .click()
