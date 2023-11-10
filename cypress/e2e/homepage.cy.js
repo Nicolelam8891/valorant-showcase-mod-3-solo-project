@@ -77,7 +77,28 @@ describe("Homepage user flow", () => {
         .click()
         .get(".character-container")
         .get(".card")
-        .should("have.length", 5);
+        .should("have.length", 5)
+        .get(
+          '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card > .character-icon-image'
+        )
+        .first()
+        .get(".role-name-container")
+        .get(".character-name")
+        .contains("p", "Deadlock")
+        .get(".character-role")
+        .contains("p", "Role: Sentinel")
+        .get(
+          '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card'
+        )
+        .first()
+        .find("img")
+        .should(
+          "have.attr",
+          "src",
+          "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png"
+        );
+
+      //   .get('[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card')
       // .get(".team-button")
       // .contains("TEAM")
       // .click()
