@@ -2,7 +2,7 @@ import "./TeamOne.css";
 import PropTypes from "prop-types";
 
 const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
-  console.log("deleteCharacter:=====", deleteCharacter);
+console.log("deleteCharacter:=====", deleteCharacter);
 
   return (
     <div className='team-one-page'>

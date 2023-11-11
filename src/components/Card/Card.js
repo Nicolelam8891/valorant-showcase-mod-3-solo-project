@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const Card = ({ icon, name, role, id }) => {
+
   return (
     <Link to={`/characterDetails/${id}`} className="no-underline">
       <div className='card'>
