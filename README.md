@@ -42,3 +42,14 @@ End-to-end testing with Cypress
 User stories and acceptance criteria, and personas
 Worked within time constraints (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
 Responsive design across mobile, tablets and different desktop sizes 
+
+## Challenges:
+Filter functionality and logic
+Cypress
+
+## Wins:
+Responsive design
+Utilizing Figma to create the app design
+Adding players to team and delete functionaility 
+
+
