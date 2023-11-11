@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./CharacterDetails.css";
 import { useParams } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setConfirmationMessage, setErrorMessage }) => {
   const [character, setCharacter] = useState(null);
@@ -102,3 +103,11 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setCon
 };
 
 export default CharacterDetails;
+
+CharacterDetails.propTypes = {
+  addToTeam: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string,
+  confirmationMessage: PropTypes.string,
+  setConfirmationMessage: PropTypes.func.isRequired,
+  setErrorMessage: PropTypes.func.isRequired
+};

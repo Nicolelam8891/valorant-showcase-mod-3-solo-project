@@ -1,5 +1,6 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Header = ({ showHomeButton, showTeamButton }) => {
   return (
@@ -27,3 +28,8 @@ const Header = ({ showHomeButton, showTeamButton }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  showHomeButton: PropTypes.bool.isRequired,
+  showTeamButton: PropTypes.bool.isRequired
+};
