@@ -44,7 +44,7 @@ Worked within time constraints (5 days) to deliver a project for a niche audienc
 Responsive design across mobile, tablets and different desktop sizes |
 
 ## Challenges:
-Filter functionality and logic |
+Filter functionality | logic |
 Cypress |
 
 ## Wins:
