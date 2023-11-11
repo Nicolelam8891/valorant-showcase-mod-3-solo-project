@@ -1,4 +1,4 @@
-# RANCID TOMATILLOS
+# VALORANT SHOWCASE
 <div align="center">
   
 ##### Built With:
@@ -13,11 +13,12 @@ Fully tested e2e with Cypress!
 Welcome to my Valorant app! 
 
 🎮 Dive into the World of Valorant Like Never Before! 🎮
-Are you a Valorant enthusiast looking for an immersive way to explore your favorite agents? Look no further! My app brings the vibrant universe of Valorant right to your fingertips. Whether you're strategizing for your next match and trying to build a team with your fellow friends or a fan of Valorant, my app will be useful for you!
 
-You can easily navigate through the diverse array of agents with my intuitive filtering system. You can select on the agents based on their roles, such as: Duelists, Controllers, Initiators, or Sentinels. You can discover and explore their unique abilities and learn about their details! You also also learn more about their abilities and while you are at it, hover over the different abilities for go for a spin! 
+Are you a Valorant enthusiast looking for an immersive way to explore your favorite agents? Look no further! My app brings the vibrant universe of Valorant right to your fingertips. Whether you're strategizing for your next match and trying to build a team with your fellow friends or a fan of Valorant--my app will be useful for you!
 
-Now that you have learned so much about your agent, you can build a team of up to 5 agents! You can easily add your agents to a team, helping you visualize the perfect lineup for your play style. Go ahead and mix and match agents based on their abilities and roles-crafting a team that aligns with your strategy and preferences! 
+You can easily navigate through the agents with my intuitive filtering system. You can select on the agents based on their roles, such as: Duelists, Controllers, Initiators, or Sentinels. You can discover and explore their unique abilities and learn about their details! You can also learn more about their abilities and while you are at it, hover over the different abilities and go for a spin! 
+
+Now that you have learned so much about your agent, you can build a team of up to 5! You can easily add your agents to a team, helping you visualize the perfect lineup for your play style. Go ahead and mix and match agents based on their abilities and roles-crafting a team that aligns with your strategy and preferences! 
 
 I hope you enjoy the visuals with high quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
 
@@ -28,7 +29,7 @@ I hope you enjoy the visuals with high quality images and interactive elements t
 Nicole Lam 
 
 ## Context:
-This is the final solo project of Mod 3 at Turing School of Software & Design. We were given 5 days to create this project from scratch after I agreed on an MVP with my project manager. I probably spent around 40-50 hours on this project over the week. This project is my third attempt at making a react app and my first attempt utilizing Figma independently. I learned a lot this round and now understand how powerful of a tool Figma is when desigining your app. I used technologies such as react-router, cypress e2e testing, responsive design, proptypes and animation.
+This is the final solo project of Mod 3 at Turing School of Software & Design. We were given 5 days to create this project from scratch after I agreed on an MVP with my project manager. I probably spent around 40-50 hours on this project over the week. This project is my third attempt at making a react app and my first attempt utilizing Figma independently. I learned a lot this round and now understand how powerful of a tool Figma is when desigining an app. I used technologies such as react-router, cypress e2e testing, responsive design, proptypes and animation.
 
 ## Learning Goals:
 Gain competency with React fundamentals
@@ -40,14 +41,5 @@ User stories and acceptance criteria, and personas
 Worked within time constraits (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
 Responsive deisgn across mobile, tablets and different desktop sizes 
 
-
-Come check out my app! 
+🎮Come check out my app!🎮
 Deployed Link: https://rotten-tomatillos-eta.vercel.app/
-
-# Valorant Showcase
-<div align="center">
-  
-##### Built With:
-  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
- <img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge" />
-
