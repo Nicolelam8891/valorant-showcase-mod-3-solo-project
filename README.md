@@ -20,11 +20,10 @@ You can easily navigate through the agents with my intuitive filtering system. Y
 
 Now that you have learned so much about your agent, you can build a team of up to 5! You can easily add your agents to a team, helping you visualize the perfect lineup for your play style. Go ahead and mix and match agents based on their abilities and roles-crafting a team that aligns with your strategy and preferences! 
 
-I hope you enjoy the visuals with high quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
+I hope you enjoy the visuals with high-quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
 
 ## Preview of App:
-![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/27926d92-da62-4ce1-8571-c8df30a9502a)
-(GIF LINK HERE)
+![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/7e5f2dff-8899-4855-911a-6a9345944ba6)
 
 ## Contributors:
 Nicole Lam 
