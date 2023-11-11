@@ -1,4 +1,4 @@
-describe("Homepage user flow", () => {
+describe("Homepage", () => {
   beforeEach(() => {
     cy.intercept(
       "GET",
@@ -11,7 +11,7 @@ describe("Homepage user flow", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  it("should display header, drop-down, buttons and 24 character cards on load", () => {
+  it("User flow for homepage", () => {
     cy.wait("@homepage").then((interception) => {
       cy.location("pathname").should("eq", "/");
       cy.get("header")
@@ -52,10 +52,10 @@ describe("Homepage user flow", () => {
           '[href="/characterDetails/add6443a-41bd-e414-f6ad-e58d267f4e95"] > .card'
         )
         .get(".character-role")
-        .contains("p", "Role: Duelist");
-      cy.get(
-        '[href="/characterDetails/add6443a-41bd-e414-f6ad-e58d267f4e95"] > .card'
-      )
+        .contains("p", "Role: Duelist")
+        .get(
+          '[href="/characterDetails/add6443a-41bd-e414-f6ad-e58d267f4e95"] > .card'
+        )
         .last()
         .find("img")
         .should(
@@ -81,6 +81,10 @@ describe("Homepage user flow", () => {
         .get(".character-container")
         .get(".card")
         .should("have.length", 5)
+        .get('[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"]')
+        .get(
+          '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card'
+        )
         .get(
           '[href="/characterDetails/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235"] > .card > .character-icon-image'
         )
@@ -122,8 +126,13 @@ describe("Homepage user flow", () => {
         .get(".team-button")
         .contains("TEAM")
         .click()
-        .url().should('eq', 'http://localhost:3000/team')
-        .get('.empty-team-message').contains('h2', "There are no saved characters yet, you can add up to 5 characters on a team!")
+        .url()
+        .should("eq", "http://localhost:3000/team")
+        .get(".empty-team-message")
+        .contains(
+          "h2",
+          "There are no saved characters yet, you can add up to 5 characters on a team!"
+        )
         .get(".home-button")
         .contains("HOME")
         .click()
