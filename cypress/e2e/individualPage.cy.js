@@ -21,13 +21,14 @@ describe("Show selected character user flow", () => {
     );
   });
 
-  it("should display individual character details", () => {
+  it("should display individual character details and add to team", () => {
     cy.wait("@gekko").then((interception) => {
       cy.get("header")
         .get(".valorant-logo")
         .get(".line")
         .get(".home-button")
         .contains("HOME")
+        .get(".single-character-page")
         .get(".character-info-container")
         .get(".single-character-name")
         .contains("p", "Name: Gekko")
@@ -44,7 +45,7 @@ describe("Show selected character user flow", () => {
           "Initiators challenge angles by setting up their team to enter contested ground and push defenders away."
         )
         .get(".abilities-name > strong")
-
+        .contains("Abilities")
         .get(".ability-section")
         .get(".ability-details")
         .get(".ability-details > :nth-child(1)")
@@ -62,9 +63,9 @@ describe("Show selected character user flow", () => {
         .contains(
           "p",
           "EQUIP Wingman. FIRE to send Wingman forward seeking enemies. Wingman unleashes a concussive blast toward the first enemy he sees. ALT FIRE when targeting a Spike site or planted Spike to have Wingman defuse or plant the Spike. To plant, Gekko must have the Spike in his inventory. When Wingman expires he reverts into a dormant globule. INTERACT to reclaim the globule and gain another Wingman charge after a short cooldown."
-        );
-      cy.get(".ability-details > :nth-child(2)");
-      cy.get(":nth-child(2) > .ability-icon")
+        )
+        .get(".ability-details > :nth-child(2)")
+        .get(":nth-child(2) > .ability-icon")
         .should("have.attr", "src")
         .should(
           "eq",
@@ -76,49 +77,57 @@ describe("Show selected character user flow", () => {
         .contains(
           "p",
           "EQUIP Dizzy. FIRE to send Dizzy soaring forward through the air. Dizzy charges then unleashes plasma blasts at enemies in line of sight. Enemies hit by her plasma are Blinded. When Dizzy expires she reverts into a dormant globule. INTERACT to reclaim the globule and gain another Dizzy charge after a short cooldown."
-        );
-      cy.get(".ability-details > :nth-child(3)");
-      cy.get(":nth-child(3) > .ability-icon")
+        )
+        .get(".ability-details > :nth-child(3)")
+        .get(":nth-child(3) > .ability-icon")
         .should("have.attr", "src")
         .should(
           "eq",
           "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/grenade/displayicon.png"
-        );
-      cy.get(":nth-child(3) > .ability-name").contains("h3", "Mosh Pit");
-      cy.get(":nth-child(3) > .ability-description").contains(
-        "p",
-        "EQUIP Mosh. FIRE to throw Mosh like a grenade. ALT FIRE to lob. Upon landing Mosh duplicates across a large area that deals a small amount of damage over time then after a short delay explodes."
-      );
-      cy.get(".ability-details > :nth-child(4)");
-      cy.get(":nth-child(4) > .ability-icon")
+        )
+        .get(":nth-child(3) > .ability-name")
+        .contains("h3", "Mosh Pit")
+        .get(":nth-child(3) > .ability-description")
+        .contains(
+          "p",
+          "EQUIP Mosh. FIRE to throw Mosh like a grenade. ALT FIRE to lob. Upon landing Mosh duplicates across a large area that deals a small amount of damage over time then after a short delay explodes."
+        )
+        .get(".ability-details > :nth-child(4)")
+        .get(":nth-child(4) > .ability-icon")
         .should("have.attr", "src")
         .should(
           "eq",
           "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/abilities/ultimate/displayicon.png"
-        );
-      cy.get(":nth-child(4) > .ability-name").contains("h3", "Thrash");
-      cy.get(":nth-child(4) > .ability-description").contains(
-        "p",
-        "EQUIP Thrash. FIRE to link with Thrash’s mind and steer her through enemy territory. ACTIVATE to lunge forward and explode, Detaining any players in a small radius. When Thrash expires she reverts into a dormant globule. INTERACT to reclaim the globule and gain another Thrash charge after a short cooldown. Thrash can be reclaimed once."
-      );
-      cy.get(".character-full-portrait-container");
-      cy.get(".character-full-portrait")
+        )
+        .get(":nth-child(4) > .ability-name")
+        .contains("h3", "Thrash")
+        .get(":nth-child(4) > .ability-description")
+        .contains(
+          "p",
+          "EQUIP Thrash. FIRE to link with Thrash’s mind and steer her through enemy territory. ACTIVATE to lunge forward and explode, Detaining any players in a small radius. When Thrash expires she reverts into a dormant globule. INTERACT to reclaim the globule and gain another Thrash charge after a short cooldown. Thrash can be reclaimed once."
+        )
+        .get(".character-full-portrait-container")
+        .get(".character-full-portrait")
         .should("have.attr", "src")
         .should(
           "eq",
           "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
-        );
-      cy.get(".character-full-portrait-container");
-      cy.get(".add-to-team-button").contains("Add to Team").click();
-      cy.get(".team-confirmation-message").contains(
-        "Character added successfully!"
-      );
-      cy.get(".add-to-team-button").contains("Add to Team").click();
-      cy.get(".team-error-message").contains(
-        "This character has already been added to the team. Please select another."
-      );
-      cy.get("header");
-      cy.get('[href="/team"]')
+        )
+        .get(".character-full-portrait-container")
+        .get(".add-to-team-button")
+        .contains("Add to Team")
+        .click()
+        .get(".team-confirmation-message")
+        .contains("Character added successfully!")
+        .get(".add-to-team-button")
+        .contains("Add to Team")
+        .click()
+        .get(".team-error-message")
+        .contains(
+          "This character has already been added to the team. Please select another."
+        )
+        .get("header")
+        .get('[href="/team"]')
         .get(".team-button")
         .contains("TEAM")
         .click()
@@ -128,19 +137,28 @@ describe("Show selected character user flow", () => {
         .get(".valorant-logo")
         .get(".line")
         .get(".home-button")
-        .contains("HOME");
-      cy.get(".team-one-container");
-      cy.get(".display-icon-image-card");
-      cy.get(".display-icon-image")
+        .contains("HOME")
+        .get(".team-one-container")
+        .get(".display-icon-image-card")
+        .get(".display-icon-image")
         .should("have.attr", "src")
         .should(
           "eq",
           "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayiconsmall.png"
+        )
+        .get(".team-icon-info")
+        .get(".character-name")
+        .contains("p", "Gekko")
+        .get(".character-role")
+        .contains("p", "Role: Initiator")
+        .get(".delete-button")
+        .contains("❌")
+        .click()
+        .get(".empty-team-message")
+        .contains(
+          "h2",
+          "There are no saved characters yet, you can add up to 5 characters on a team!"
         );
-      cy.get(".team-icon-info");
-      cy.get(".character-name").contains("p", "Gekko");
-      cy.get(".character-role").contains("p", "Role: Initiator");
-      cy.get(".delete-button").contains("❌");
     });
   });
 });

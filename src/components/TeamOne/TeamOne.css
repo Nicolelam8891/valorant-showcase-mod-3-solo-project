@@ -47,6 +47,7 @@
   border: 3px solid #7e5757;
   border-radius: 20px;
 }
+
 .team-icon-info {
   display: flex;
   justify-content: center;
@@ -72,6 +73,16 @@
   line-height: normal;
   text-decoration: none;
   border-radius: 20px;
+}
+
+.delete-button:hover {
+  background-color: #a8d7ee;
+}
+
+.delete-button:active {
+  background-color: #efa4a4;
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 375px) {

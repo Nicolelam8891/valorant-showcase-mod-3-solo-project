@@ -1,3 +1,35 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smokeEffect {
+  0%,
+  100% {
+    filter: blur(0px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(4px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); 
+    opacity: 0; 
+  }
+  to {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
 .character-details {
   display: flex;
   flex-direction: row;
@@ -17,8 +49,9 @@
   width: 550px;
   animation: slideDown 1s ease-out forwards;
 }
-p {
-  color: white;
+
+.character-full-portrait:hover {
+  filter: brightness(150%);
 }
 
 .team-confirmation-message {
@@ -61,6 +94,7 @@ p {
   text-shadow: #0071a7;
   font-size: 25px;
 }
+
 .character-full-portrait-container {
   display: flex;
   flex-direction: column;
@@ -108,6 +142,16 @@ p {
   margin-right: 20px;
 }
 
+.add-to-team-button:hover {
+  background-color: #114259;
+}
+
+.add-to-team-button:active {
+  background-color: #4f2121;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 .add-to-team-button {
   display: flex;
   justify-content: space-around;
@@ -128,38 +172,6 @@ p {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes smokeEffect {
-  0%,
-  100% {
-    filter: blur(0px);
-    opacity: 0;
-  }
-  50% {
-    filter: blur(4px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%); /* Start from above the screen */
-    opacity: 0; /* Start with the character invisible */
-  }
-  to {
-    transform: translateY(0); /* End at the current position */
-    opacity: 1; /* End with the character fully visible */
-  }
 }
 
 @media (min-width: 375px) {
