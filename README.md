@@ -50,6 +50,7 @@ Cypress
 ## Wins:
 Responsive design |
 Utilizing Figma to create the app design |
-Adding players to team and delete functionality 
+Adding players to team and delete functionality |
+Animation 
 
 
