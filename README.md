@@ -27,13 +27,13 @@ I hope you enjoy the visuals with high-quality images and interactive elements t
 
 If you would like to run the app from your machine, follow these instructions:
 
-- Fork [this](https://github.com/Nicolelam8891/valorantshowcase) repository.
+Fork [this](https://github.com/Nicolelam8891/valorantshowcase) repository.
 
 Clone it to your local machine using the command: `git@github.com:Nicolelam8891/valorantshowcase`.
-Run the command: `cd valorantshowcase`
-Run the command: `npm install`
-Run the command: `npm start`
-Once the modules have finished compiling, enter `http://localhost:3000/` into your browser to see the live web page.
+- Run the command: `cd valorantshowcase`
+- Run the command: `npm install`
+- Run the command: `npm start`
+- Once the modules have finished compiling, enter `http://localhost:3000/` into your browser to see the live web page.
 
 ## Preview of App:
 ![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/935a262a-233e-449c-8a62-9882d4f3d62e)
