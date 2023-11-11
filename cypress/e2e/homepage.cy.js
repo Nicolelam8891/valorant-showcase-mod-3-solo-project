@@ -140,4 +140,37 @@ describe("Homepage", () => {
         .should("eq", "http://localhost:3000/");
     });
   });
+
+  it("should display helpful error messages to user", () => {
+    cy.intercept(
+      "GET",
+      "https://valorant-api.com/v1/agents?isPlayableCharacter=true",
+      {
+        statusCode: 404,
+        body: "Not Found",
+      }
+    ).as("apiErrorMessage");
+
+    cy.visit("http://localhost:3000/");
+    cy.wait("@apiErrorMessage");
+    cy.contains(
+      "Sorry, there is an error! status: 404. Please try again later"
+    );
+  });
+
+  it("should display helpful error messages to user", () => {
+    cy.intercept(
+      "GET",
+      "https://valorant-api.com/v1/agents?isPlayableCharacter=true",
+      {
+        statusCode: 500,
+        body: "Not Found",
+      }
+    ).as("apiErrorMessage");
+    cy.visit("http://localhost:3000/");
+    cy.wait("@apiErrorMessage");
+    cy.contains(
+      "Sorry, there is an error! status: 500. Please try again later"
+    );
+  });
 });

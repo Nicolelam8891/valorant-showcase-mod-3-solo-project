@@ -1,11 +1,9 @@
 import "./CharacterContainer.css";
 import Card from "../Card/Card";
-import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const CharacterContainer = ({ getAllData, characters, error }) => {
-  console.log("error:=====", error);
-
+  
   const characterCards = characters.map((character) => {
     const { displayIcon, displayName, role, uuid } = character;
     const roleDisplayName = role ? role.displayName : "No role";

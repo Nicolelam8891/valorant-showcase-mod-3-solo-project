@@ -17,7 +17,6 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setCon
         );
       }
       const data = await response.json();
-      console.log("individualCharacter", data);
       setCharacter(data.data);
     } catch (event) {
       console.error(event.message);
@@ -97,7 +96,6 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setCon
           </div>
         </div>
       </div>
-      {/* {error && <p className='error-message'>{error}</p>} */}
     </div>
   );
 };

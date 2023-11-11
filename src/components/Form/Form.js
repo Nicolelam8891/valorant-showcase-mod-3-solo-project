@@ -1,5 +1,5 @@
 import "./Form.css";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Form = ( { filterRole} ) => {
