@@ -58,7 +58,7 @@ Responsive design across mobile, tablets and different desktop sizes
 
 ## Challenges:
 Filter functionality | logic |
-Cypress 
+Cypress | I used dev tools to do responsive design for the iphone 12 dimension. It looked perfect; however, when I used my app on my iphone 12 phone with a safari and chrome browser, it didn't look the same as it does on dev tools. Reached out to a mentor for clarification on this and how to fix this in the future. 
 
 ## Wins:
 Responsive design |
@@ -66,4 +66,5 @@ Utilizing Figma to create the app design |
 Adding players to team and delete functionality |
 Animation 
 
+## Future Additions: When I have more time, I am planning to have a Add to Team 1 and Add to Team 2 button. The team page will have a Team 1 side VS a Team 2 side of characters. I would also like to implement a search bar to the app. 
 
