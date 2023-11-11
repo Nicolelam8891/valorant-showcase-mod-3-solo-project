@@ -26,7 +26,6 @@ const App = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setCharacters(data.data);
         setAllCharacters(data.data);
       })
@@ -52,7 +51,7 @@ const App = () => {
   };
 
   const addToTeam = (characterObject) => {
-    setErrorMessage(""); //this will reset the error message each time a user tries to add a character.
+    setErrorMessage(""); 
     setConfirmationMessage("Character added successfully!");
     if (
       teamOneCharacters.some(
@@ -65,7 +64,6 @@ const App = () => {
     } else if (teamOneCharacters.length >= 5) {
       setErrorMessage("You can only add a maximum of 5 players to a team.");
     } else {
-      // Add the character to the team if it's not full and the character isn't already added
       setTeamOneCharacters((teamOneCharacters) => [
         ...teamOneCharacters,
         characterObject,

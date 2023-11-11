@@ -125,40 +125,42 @@ describe("Show selected character user flow", () => {
         .get(".team-error-message")
         .contains(
           "This character has already been added to the team. Please select another."
-        )
-        .get("header")
-        .get('[href="/team"]')
-        .get(".team-button")
-        .contains("TEAM")
-        .click()
-        .url()
-        .should("eq", "http://localhost:3000/team");
-      cy.get("header")
-        .get(".valorant-logo")
-        .get(".line")
-        .get(".home-button")
-        .contains("HOME")
-        .get(".team-one-container")
-        .get(".display-icon-image-card")
-        .get(".display-icon-image")
-        .should("have.attr", "src")
-        .should(
-          "eq",
-          "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayiconsmall.png"
-        )
-        .get(".team-icon-info")
-        .get(".character-name")
-        .contains("p", "Gekko")
-        .get(".character-role")
-        .contains("p", "Role: Initiator")
-        .get(".delete-button")
-        .contains("❌")
-        .click()
-        .get(".empty-team-message")
-        .contains(
-          "h2",
-          "There are no saved characters yet, you can add up to 5 characters on a team!"
         );
+      it("should display helpful error messages to user", () => {
+        cy.get("header")
+          .get('[href="/team"]')
+          .get(".team-button")
+          .contains("TEAM")
+          .click()
+          .url()
+          .should("eq", "http://localhost:3000/team");
+        cy.get("header")
+          .get(".valorant-logo")
+          .get(".line")
+          .get(".home-button")
+          .contains("HOME")
+          .get(".team-one-container")
+          .get(".display-icon-image-card")
+          .get(".display-icon-image")
+          .should("have.attr", "src")
+          .should(
+            "eq",
+            "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayiconsmall.png"
+          )
+          .get(".team-icon-info")
+          .get(".character-name")
+          .contains("p", "Gekko")
+          .get(".character-role")
+          .contains("p", "Role: Initiator")
+          .get(".delete-button")
+          .contains("❌")
+          .click()
+          .get(".empty-team-message")
+          .contains(
+            "h2",
+            "There are no saved characters yet, you can add up to 5 characters on a team!"
+          );
+      });
     });
   });
 });
