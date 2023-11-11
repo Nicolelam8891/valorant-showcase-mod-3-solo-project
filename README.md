@@ -23,7 +23,7 @@ Now that you have learned so much about your agent, you can build a team of up t
 I hope you enjoy the visuals with high-quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
 
 ## Preview of App:
-![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/7e5f2dff-8899-4855-911a-6a9345944ba6)
+![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/a8b8d330-371f-47ee-8df9-b3d494ab8433)
 
 ## Contributors:
 Nicole Lam 
