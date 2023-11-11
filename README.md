@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# VALORANT SHOWCASE
+<div align="center">
+  
+##### Built With:
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+ <img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### Testing Technologies:
+Fully tested e2e with Cypress!
 
-## Available Scripts
+  -----
+## Abstract:
+Welcome to my Valorant app! 
 
-In the project directory, you can run:
+🎮 Dive into the World of Valorant Like Never Before! 🎮
 
-### `npm start`
+Are you a Valorant enthusiast looking for an immersive way to explore your favorite agents? Look no further! My app brings the vibrant universe of Valorant right to your fingertips. Whether you're strategizing for your next match and trying to build a team with your fellow friends or a fan of Valorant--my app will be useful for you!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can easily navigate through the agents with my intuitive filtering system. You can select on the agents based on their roles, such as: Duelists, Controllers, Initiators, or Sentinels. You can discover and explore their unique abilities and learn about their details! You can also learn more about their abilities and while you are at it, hover over the different abilities and go for a spin! 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Now that you have learned so much about your agent, you can build a team of up to 5! You can easily add your agents to a team, helping you visualize the perfect lineup for your play style. Go ahead and mix and match agents based on their abilities and roles-crafting a team that aligns with your strategy and preferences! 
 
-### `npm test`
+I hope you enjoy the visuals with high quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Preview of App:
+![Rancid](GIF LINK HERE)
 
-### `npm run build`
+## Contributors:
+Nicole Lam 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Context:
+This is the final solo project of Mod 3 at Turing School of Software & Design. We were given 5 days to create this project from scratch after I agreed on an MVP with my project manager. I probably spent around 40-50 hours on this project over the week. This project is my third attempt at making a react app and my first attempt utilizing Figma independently. I learned a lot this round and now understand how powerful of a tool Figma is when desigining an app. I used technologies such as react-router, cypress e2e testing, responsive design, proptypes and animation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Learning Goals:
+Gain competency with React fundamentals
+Test React components & asynchronous JS
+Practice refactoring
+Create a multi-page UX using Router
+End to end testing wth Cypress
+User stories and acceptance criteria, and personas
+Worked within time constraits (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
+Responsive deisgn across mobile, tablets and different desktop sizes 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🎮Come check out my app!🎮
+Deployed Link: https://rotten-tomatillos-eta.vercel.app/
