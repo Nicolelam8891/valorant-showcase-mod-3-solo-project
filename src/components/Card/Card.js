@@ -1,7 +1,9 @@
 import "./Card.css";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Card = ({ icon, name, role, id }) => {
+
   return (
     <Link to={`/characterDetails/${id}`} className="no-underline">
       <div className='card'>
@@ -16,3 +18,10 @@ const Card = ({ icon, name, role, id }) => {
 };
 
 export default Card;
+
+Card.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};

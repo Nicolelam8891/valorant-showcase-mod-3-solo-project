@@ -1,5 +1,6 @@
 import "./Form.css";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Form = ( { filterRole} ) => {
   const [selectedRole, setSelectedRole] = useState("");
@@ -30,3 +31,7 @@ const Form = ( { filterRole} ) => {
 };
 
 export default Form;
+
+Form.propTypes = {
+  filterRole: PropTypes.func.isRequired
+};
