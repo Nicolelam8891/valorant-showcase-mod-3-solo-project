@@ -25,7 +25,8 @@ I hope you enjoy the visuals with high-quality images and interactive elements t
 ## Preview of App:
 ![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/935a262a-233e-449c-8a62-9882d4f3d62e)
 
-
+🎮Come check out my app!🎮
+Deployed Link: https://valorantshowcase.vercel.app/
 ## Contributors:
 Nicole Lam 
 
@@ -41,6 +42,3 @@ End-to-end testing with Cypress
 User stories and acceptance criteria, and personas
 Worked within time constraints (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
 Responsive design across mobile, tablets and different desktop sizes 
-
-🎮Come check out my app!🎮
-Deployed Link: https://rotten-tomatillos-eta.vercel.app/
