@@ -23,23 +23,24 @@ Now that you have learned so much about your agent, you can build a team of up t
 I hope you enjoy the visuals with high quality images and interactive elements that bring the agents to life. Have fun exploring my app and most of all, have fun playing VALORANT! 
 
 ## Preview of App:
-![Rancid](GIF LINK HERE)
+![Valorant](https://github.com/Nicolelam8891/valorantshowcase/assets/132624450/27926d92-da62-4ce1-8571-c8df30a9502a)
+(GIF LINK HERE)
 
 ## Contributors:
 Nicole Lam 
 
 ## Context:
-This is the final solo project of Mod 3 at Turing School of Software & Design. We were given 5 days to create this project from scratch after I agreed on an MVP with my project manager. I probably spent around 40-50 hours on this project over the week. This project is my third attempt at making a react app and my first attempt utilizing Figma independently. I learned a lot this round and now understand how powerful of a tool Figma is when desigining an app. I used technologies such as react-router, cypress e2e testing, responsive design, proptypes and animation.
+This is the final solo project of Mod 3 at Turing School of Software & Design. We were given 5 days to create this project from scratch after I agreed on an MVP with my project manager. I probably spent around 40-50 hours on this project over the week. This project is my third attempt at making a react app and my first attempt utilizing Figma independently. I learned a lot this round and now understand how powerful of a tool Figma is when designing an app. I used technologies such as react-router, cypress e2e testing, responsive design, prototypes and animation.
 
 ## Learning Goals:
 Gain competency with React fundamentals
 Test React components & asynchronous JS
 Practice refactoring
 Create a multi-page UX using Router
-End to end testing wth Cypress
+End-to-end testing with Cypress
 User stories and acceptance criteria, and personas
-Worked within time constraits (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
-Responsive deisgn across mobile, tablets and different desktop sizes 
+Worked within time constraints (5 days) to deliver a project for a niche audience, helping them solve a problem unique to them
+Responsive design across mobile, tablets and different desktop sizes 
 
 🎮Come check out my app!🎮
 Deployed Link: https://rotten-tomatillos-eta.vercel.app/
