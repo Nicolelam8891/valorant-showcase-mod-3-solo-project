@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Card = ({ icon, name, role, id }) => {
 
   return (
-    <Link to={`/characterDetails/${id}`} className="no-underline">
+    <Link to={`/characterDetails/${id}`} className="no-underline card-button">
       <div className='card'>
         <img src={icon} className='character-icon-image' />
         <div className='role-name-container'>
