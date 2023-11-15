@@ -5,6 +5,9 @@ import CharacterDetails from "../CharacterDetails/CharacterDetails";
 import Header from "../Header/Header";
 import TeamOne from "../TeamOne/TeamOne";
 import Form from "../Form/Form";
+import Error from "../Error/Error";
+
+
 import { useState, useEffect } from "react";
 
 const App = () => {
@@ -51,7 +54,7 @@ const App = () => {
   };
 
   const addToTeam = (characterObject) => {
-    setErrorMessage(""); 
+    setErrorMessage("");
     setConfirmationMessage("Character added successfully!");
     if (
       teamOneCharacters.some(
@@ -123,6 +126,15 @@ const App = () => {
                 deleteCharacter={deleteCharacter}
               />
             </>
+          }
+        />
+        <Route
+          path='/*'
+          element={
+            <Error
+              error={error}
+              message="Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"
+            />
           }
         />
       </Routes>
