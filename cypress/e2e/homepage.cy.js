@@ -173,4 +173,52 @@ describe("Homepage", () => {
       "Sorry, there is an error! status: 500. Please try again later"
     );
   });
+
+  it("Tests a bad route page for the home page", () => {
+    cy.visit("http://localhost:3000/nonsense");
+    cy.get(".nonsense-home-button").contains("HOME");
+    cy.get(".error-message-nonsense").contains("h1", "ERROR");
+    cy.get(".error-nonsense").contains(
+      "h3",
+      "Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"
+    );
+    cy.get(".error-nonsense-image")
+      .should("have.attr", "src")
+      .should(
+        "eq",
+        "https://cdn.vox-cdn.com/thumbor/wXT1cC7FbgOVM5TQ2WUjolI38Ik=/0x0:3840x2160/1200x800/filters:focal(1613x773:2227x1387)/cdn.vox-cdn.com/uploads/chorus_image/image/69376580/VALORANT_YR1_KeyArt_4k_3_.0.jpg"
+      );
+  });
+
+  it("Tests a bad route page for the character details page", () => {
+    cy.visit("http://localhost:3000/characterDetails/dade69b4-4f5a-8528-247b-219e5a1facd6/nonsense");
+    cy.get(".nonsense-home-button").contains("HOME");
+    cy.get(".error-message-nonsense").contains("h1", "ERROR");
+    cy.get(".error-nonsense").contains(
+      "h3",
+      "Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"
+    );
+    cy.get(".error-nonsense-image")
+      .should("have.attr", "src")
+      .should(
+        "eq",
+        "https://cdn.vox-cdn.com/thumbor/wXT1cC7FbgOVM5TQ2WUjolI38Ik=/0x0:3840x2160/1200x800/filters:focal(1613x773:2227x1387)/cdn.vox-cdn.com/uploads/chorus_image/image/69376580/VALORANT_YR1_KeyArt_4k_3_.0.jpg"
+      );
+  });
+
+  it("Tests a bad route page for the team page", () => {
+    cy.visit("http://localhost:3000/team/nonsense");
+    cy.get(".nonsense-home-button").contains("HOME");
+    cy.get(".error-message-nonsense").contains("h1", "ERROR");
+    cy.get(".error-nonsense").contains(
+      "h3",
+      "Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"
+    );
+    cy.get(".error-nonsense-image")
+      .should("have.attr", "src")
+      .should(
+        "eq",
+        "https://cdn.vox-cdn.com/thumbor/wXT1cC7FbgOVM5TQ2WUjolI38Ik=/0x0:3840x2160/1200x800/filters:focal(1613x773:2227x1387)/cdn.vox-cdn.com/uploads/chorus_image/image/69376580/VALORANT_YR1_KeyArt_4k_3_.0.jpg"
+      );
+  });
 });
