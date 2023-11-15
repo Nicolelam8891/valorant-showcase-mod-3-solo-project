@@ -2,7 +2,7 @@ import "./CharacterContainer.css";
 import Card from "../Card/Card";
 import PropTypes from "prop-types";
 
-const CharacterContainer = ({ getAllData, characters, error }) => {
+const CharacterContainer = ({ getAllData, characters, error,  }) => {
   
   const characterCards = characters.map((character) => {
     const { displayIcon, displayName, role, uuid } = character;
@@ -23,6 +23,8 @@ const CharacterContainer = ({ getAllData, characters, error }) => {
     <main className='character-container'>
       {characterCards}
       {error && <p className='error-message'>{error}</p>}
+      
+
     </main>
   );
 };

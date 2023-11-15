@@ -21,7 +21,7 @@
 }
 
 .error-message-nonsense,
-.bad-route-message {
+.error-nonsense {
   display: flex;
   justify-content: center;
   color: rgb(200, 203, 243);
@@ -43,7 +43,7 @@
   width: 600px;
 }
 
-.error {
+.error-bad-route-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

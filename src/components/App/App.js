@@ -5,8 +5,7 @@ import CharacterDetails from "../CharacterDetails/CharacterDetails";
 import Header from "../Header/Header";
 import TeamOne from "../TeamOne/TeamOne";
 import Form from "../Form/Form";
-import Error from "../Error/Error";
-
+import BadRoute from "../BadRoute/BadRoute";
 
 import { useState, useEffect } from "react";
 
@@ -131,9 +130,8 @@ const App = () => {
         <Route
           path='/*'
           element={
-            <Error
-              error={error}
-              message="Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"
+            <BadRoute
+              errorRoute={"Oh no agent, you have gone down the wrong path. Find your path to battle again by clicking on the home button!"}
             />
           }
         />
