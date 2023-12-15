@@ -3,7 +3,7 @@ import "./CharacterDetails.css";
 import { useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setConfirmationMessage, setErrorMessage }) => {
+const CharacterDetails = ({ addToTeamOne, addToTeamTwo, errorMessage, confirmationMessage, setConfirmationMessage, setErrorMessage }) => {
   const [character, setCharacter] = useState(null);
   const [error, setError] = useState("");
   const { id } = useParams();
@@ -43,10 +43,16 @@ const CharacterDetails = ({ addToTeam, errorMessage, confirmationMessage, setCon
 
         <div className='character-full-portrait-container'>
           <button
-            className='add-to-team-button'
-            onClick={() => addToTeam(character)}
+            className='add-to-team-one-button'
+            onClick={() => addToTeamOne(character)}
             >
-            Add to Team
+            Add to Team 1
+          </button>
+          <button
+            className='add-to-team-two-button'
+            onClick={() => addToTeamTwo(character)}
+            >
+            Add to Team 2
           </button>
             {errorMessage && (
               <div className='team-error-message'>{errorMessage}</div>
