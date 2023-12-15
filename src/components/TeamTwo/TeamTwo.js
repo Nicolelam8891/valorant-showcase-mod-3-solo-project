@@ -1,34 +1,33 @@
-import "./TeamOne.css";
+import "./TeamTwo.css";
 import PropTypes from "prop-types";
 
-const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
+const TeamTwo = ({ teamTwoCharacters, teamOneCharacters, deleteCharacter }) => {
 
   return (
-    <div className='team-one-page'>
-      <h2 className="team-one-heading">Team 1</h2>
-
-      {/* {!teamOneCharacters.length && (
+    <div className='team-two-page'>
+      <h2 className="team-two-heading">Team 2</h2>
+      {(!teamTwoCharacters.length && !teamOneCharacters) && (
         <h2 className='empty-team-message'>
           There are no saved characters yet, you can add up to 5 characters on a
           team!
         </h2>
-      )} */}
-      <div className='team-one-container'>
-        {teamOneCharacters.map((teamOneCharacter) => (
+      )}
+      <div className='team-two-container'>
+        {teamTwoCharacters.map((teamTwoCharacter) => (
           <div className='display-icon-image-card'>
             <div className='team-icon-info'>
               <img
                 className='display-icon-image'
-                src={teamOneCharacter.displayIconSmall}
-                alt={teamOneCharacter.displayName}
+                src={teamTwoCharacter.displayIconSmall}
+                alt={teamTwoCharacter.displayName}
               />
-              <p className='character-name'>{teamOneCharacter.displayName}</p>
+              <p className='character-name'>{teamTwoCharacter.displayName}</p>
               <p className='character-role'>
-                Role: {teamOneCharacter.role.displayName}
+                Role: {teamTwoCharacter.role.displayName}
               </p>
               <button
                 className='delete-button'
-                onClick={() => deleteCharacter(teamOneCharacter)}
+                onClick={() => deleteCharacter(teamTwoCharacter)}
               >
                 ❌
               </button>
@@ -40,10 +39,10 @@ const TeamOne = ({ teamOneCharacters, deleteCharacter }) => {
   );
 };
 
-export default TeamOne;
+export default TeamTwo;
 
-TeamOne.propTypes = {
-  teamOneCharacters: PropTypes.arrayOf(
+TeamTwo.propTypes = {
+  teamTwoCharacters: PropTypes.arrayOf(
     PropTypes.shape({
       abilities: PropTypes.arrayOf(
         PropTypes.shape({

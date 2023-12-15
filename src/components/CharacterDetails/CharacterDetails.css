@@ -152,7 +152,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.add-to-team-button {
+.add-to-team-two-button, .add-to-team-one-button {
   display: flex;
   justify-content: space-around;
   align-items: center;

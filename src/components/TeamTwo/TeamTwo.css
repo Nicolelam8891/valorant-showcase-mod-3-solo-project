@@ -1,0 +1,27 @@
+.team-two-heading {
+  display: flex;
+  justify-content: center;
+  color: rgb(200, 203, 243);
+  background: linear-gradient(
+    45deg,
+    rgba(3, 3, 123, 0.8),
+    rgba(94, 9, 9, 0.8),
+    rgba(2, 2, 120, 0.8)
+  );
+  font-family: Black Ops One;
+  font-size: 30px;
+}
+
+.team-two-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.team-two-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
