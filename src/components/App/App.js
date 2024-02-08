@@ -7,6 +7,7 @@ import TeamOne from "../TeamOne/TeamOne";
 import TeamTwo from "../TeamTwo/TeamTwo";
 import Form from "../Form/Form";
 import BadRoute from "../BadRoute/BadRoute";
+import Maps from "../Maps/Maps";
 
 import { useState, useEffect } from "react";
 
@@ -158,6 +159,12 @@ const App = () => {
             />
           }
         />
+        <Route
+          path='/maps'
+          element={
+            <Maps/>
+          }
+          />
       </Routes>
     </Router>
   );
