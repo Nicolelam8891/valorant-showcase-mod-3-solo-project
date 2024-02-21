@@ -8,11 +8,13 @@ import TeamTwo from "../TeamTwo/TeamTwo";
 import Form from "../Form/Form";
 import BadRoute from "../BadRoute/BadRoute";
 import Maps from "../Maps/Maps";
+import Weapons from "../Weapons/Weapons";
 
 import { useState, useEffect } from "react";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  console.log("characters+++", characters)
   const [allCharacters, setAllCharacters] = useState([]);
   const [teamOneCharacters, setTeamOneCharacters] = useState([]);
   const [teamTwoCharacters, setTeamTwoCharacters] = useState([]);
@@ -162,9 +164,22 @@ const App = () => {
         <Route
           path='/maps'
           element={
+            <>
+            <Header showHomeButton={true} showTeamButton={true} />
             <Maps/>
+            </>
           }
           />
+     
+      <Route
+        path='/weapons'
+        element={
+          <>
+          <Header showHomeButton={true} showTeamButton={true} />
+          <Weapons />
+          </>
+        }
+      />
       </Routes>
     </Router>
   );
